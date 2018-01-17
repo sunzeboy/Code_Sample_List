@@ -15,8 +15,19 @@
    * [ProcessLoadingView](https://github.com/ayman-ibrahim/ProcessLoadingView)
 ### 亮度调节
    * [Ambience](https://github.com/tmergulhao/Ambience)
+### CollectionView
+   * [CollectionKit](https://github.com/SoySauceLab/CollectionKit?utm_source=gold_browser_extension)
+   * [CollectionViewSlantedLayout](https://github.com/yacir/CollectionViewSlantedLayout?utm_source=gold_browser_extension)
+### 动画
+   * [ViewAnimator](https://github.com/marcosgriselli/ViewAnimator?utm_source=gold_browser_extension)
 # Network
 # Tools
 ### MarkDown 
    * [MPE](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/markdown-basics)
+   
+# 效率
+   * [quicktype-xcode](https://github.com/quicktype/quicktype-xcode?utm_source=gold_browser_extension)
+
+# App
+   * [12306ForMac](https://github.com/fancymax/12306ForMac?utm_source=gold_browser_extension)
 
