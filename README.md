@@ -26,6 +26,8 @@
 # Tools
 ### MarkDown 
    * [MPE](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/markdown-basics)
+### 横竖屏 
+   * [横竖屏](https://juejin.im/post/5a3118f2f265da43062ac451)
    
 # 效率
    * [quicktype-xcode](https://github.com/quicktype/quicktype-xcode?utm_source=gold_browser_extension)
