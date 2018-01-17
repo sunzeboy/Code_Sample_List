@@ -18,6 +18,8 @@
 ### CollectionView
    * [CollectionKit](https://github.com/SoySauceLab/CollectionKit?utm_source=gold_browser_extension)
    * [CollectionViewSlantedLayout](https://github.com/yacir/CollectionViewSlantedLayout?utm_source=gold_browser_extension)
+### Slider
+   * [fluid-slider](https://github.com/Ramotion/fluid-slider?utm_source=gold_browser_extension)
 ### 动画
    * [ViewAnimator](https://github.com/marcosgriselli/ViewAnimator?utm_source=gold_browser_extension)
 # Network
