@@ -9,7 +9,12 @@
    * [精简版图片浏览器，使用UIScrollView进行图片的缩放、平移，可根据需求自定义界面或扩展功能](https://github.com/wangzhaomeng/LLPhotoBrowser)
 ### 图片处理
    * [TOCropViewController](https://github.com/TimOliver/TOCropViewController) 
-
+### Alert
+   * [Alerts-Pickers](https://github.com/dillidon/Alerts-Pickers)
+### 圆形进程条
+   * [ProcessLoadingView](https://github.com/ayman-ibrahim/ProcessLoadingView)
+### 亮度调节
+   * [Ambience](https://github.com/tmergulhao/Ambience)
 # Network
 # Tools
 ### MarkDown 
