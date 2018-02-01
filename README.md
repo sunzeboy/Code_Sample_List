@@ -5,6 +5,9 @@
 
 
 # UI
+### ViewController
+   * [TOCropViewController](https://github.com/LeoNatan/LNPopupController) 
+
 ### 相册
    * [精简版图片浏览器，使用UIScrollView进行图片的缩放、平移，可根据需求自定义界面或扩展功能](https://github.com/wangzhaomeng/LLPhotoBrowser)
 ### 图片处理
@@ -36,4 +39,8 @@
    * [12306ForMac](https://github.com/fancymax/12306ForMac?utm_source=gold_browser_extension)
    * [MVVMFramework](https://github.com/lovemo/MVVMFramework)
    
+# 小程序
+   * [天使童装](https://github.com/EastWorld/wechat-app-mall)
+   * [zanui-weapp](https://github.com/youzan/zanui-weapp)
+   * [nideshop-mini-program](https://github.com/tumobi/nideshop-mini-program)
 
