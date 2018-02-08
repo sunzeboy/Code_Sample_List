@@ -48,4 +48,5 @@
    * [天使童装](https://github.com/EastWorld/wechat-app-mall)
    * [zanui-weapp](https://github.com/youzan/zanui-weapp)
    * [nideshop-mini-program](https://github.com/tumobi/nideshop-mini-program)
+   * [weui](https://github.com/Tencent/weui)
 
