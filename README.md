@@ -53,3 +53,5 @@
    * [weui](https://github.com/Tencent/weui)
    * [minui](https://github.com/meili/minui)
 
+# AppleScript
+   * [AppleScript脚本入门](https://segmentfault.com/a/1190000011273388)
