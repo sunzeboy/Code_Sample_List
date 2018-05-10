@@ -93,4 +93,24 @@ fnArray[1](); // 2
 fnArray[2](); // 2
 ```
 
+### Nil coalescing
+
+找到多个optional中，第一个不为nil的变量
+
+```swift
+let a: String? = nil
+let b: String? = nil
+let c: String? = "C"
+
+let theFirstNonNilString = a ?? b ?? c
+// Optional("C")
+```
+理解了这个机制之后，我们就可以把它用在if分支里，通过if let绑定第一个不为nil的optional变量：
+
+```swift
+if let theFirstNonNilString = a ?? b ?? c {
+    print(theFirstNonNilString) // C
+}
+```
+
 
