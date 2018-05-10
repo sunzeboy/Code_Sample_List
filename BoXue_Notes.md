@@ -1,9 +1,21 @@
 Table of Contents
 =================
 
+* [Table of Contents](#table-of-contents)
 * [Protocol](#protocol)
-    * [1、从隐式接口和编译期多态说起](#1%E4%BB%8E%E9%9A%90%E5%BC%8F%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E6%9C%9F%E5%A4%9A%E6%80%81%E8%AF%B4%E8%B5%B7)
-    * [4、如何通过泛型编程简化网络请求？](#4%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B%E7%AE%80%E5%8C%96%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82)
+  * [1、从隐式接口和编译期多态说起](#1%E4%BB%8E%E9%9A%90%E5%BC%8F%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E6%9C%9F%E5%A4%9A%E6%80%81%E8%AF%B4%E8%B5%B7)
+  * [4、如何通过泛型编程简化网络请求？](#4%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B%E7%AE%80%E5%8C%96%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82)
+* [Optional](#optional)
+  * [有哪些常用的optional使用范式](#%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84optional%E4%BD%BF%E7%94%A8%E8%8C%83%E5%BC%8F)
+    * [if let](#if-let)
+    * [while let](#while-let)
+    * [Nil coalescing](#nil-coalescing)
+  * [为什么需要双层嵌套的Optional？](#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8F%8C%E5%B1%82%E5%B5%8C%E5%A5%97%E7%9A%84optional)
+    * [for case](#for-case)
+  * [Optional map和flatMap的应用和实现](#optional-map%E5%92%8Cflatmap%E7%9A%84%E5%BA%94%E7%94%A8%E5%92%8C%E5%AE%9E%E7%8E%B0)
+    * [Optional map](#optional-map)
+    * [Optional flatMap](#optional-flatmap)
+  * [两个调试optional的小技巧](#%E4%B8%A4%E4%B8%AA%E8%B0%83%E8%AF%95optional%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7)
     
 # Protocol
 
