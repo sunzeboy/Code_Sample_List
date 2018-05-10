@@ -7,11 +7,11 @@ Table of Contents
     
 # Protocol
 
-### 1、从隐式接口和编译期多态说起
+## 1、从隐式接口和编译期多态说起
 	对于面向对象来说，接口是显式的，是基于类型定义和方法签名的，多态是发生在运行时的；
 	而对于泛型编程，接口则是隐式的，是为了支持算法实现的，多态则是发生在编译期的
 	
-### 4、如何通过泛型编程简化网络请求？
+## 4、如何通过泛型编程简化网络请求？
 ```swift
 struct Resource<T> {
     let path: URL
@@ -62,3 +62,35 @@ extension Resource {
     }
 }
 ```
+# Optional
+## 有哪些常用的optional使用范式
+
+### if let
+
+```swift
+if let url = URL(string: imageUrl), url.pathExtension == "jpg",
+    let data = try? Data(contentsOf: url),
+    let image = UIImage(data: data) {
+
+    let view = UIImageView(image: image)
+}
+```
+### while let
+
+在Swift里，for...in循环是通过while模拟出来的，这也就意味着，for循环中的循环变量在每次迭代的时候，都是一个全新的对象，而不是对上一个循环变量的修改
+
+我们来看一段JavaScript代码:
+
+```javaScript
+var fnArray = [];
+
+for (var i in [0, 1, 2]) {
+    fnArray[i] = () => { console.log(i); };
+}
+
+fnArray[0](); // 2
+fnArray[1](); // 2
+fnArray[2](); // 2
+```
+
+
