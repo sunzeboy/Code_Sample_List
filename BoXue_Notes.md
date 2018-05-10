@@ -63,6 +63,7 @@ extension Resource {
 }
 ```
 # Optional
+
 ## 有哪些常用的optional使用范式
 
 ### if let
@@ -112,5 +113,51 @@ if let theFirstNonNilString = a ?? b ?? c {
     print(theFirstNonNilString) // C
 }
 ```
+
+## 为什么需要双层嵌套的Optional？
+### for case
+
+读取所有的非nil值：
+
+```swift
+for case let one? in intOnes {
+    print(one) // 1
+}
+```
+或者统计所有的nil值：
+
+```swift
+for case nil in intOnes {
+    print("got a nil value")
+}
+```
+## Optional map和flatMap的应用和实现
+### Optional map
+```swift
+extension Optional {
+    func myMap<T>(_ transform: (Wrapped) -> T) -> T? {
+        if let value = self {
+            return transform(value)
+        }
+
+        return nil
+    }
+}
+```
+### Optional flatMap
+```swift
+extension Optional {
+    func myFlatMap<T>(_ transform: (Wrapped) -> T?) -> T? {
+        if let value = self,
+            let mapped = transform(value) {
+            return mapped
+        }
+
+        return nil
+    }
+}
+```
+## 两个调试optional的小技巧
+   * [swift自定义操作符](https://boxueio.com/series/optional-is-not-an-option/ebook/146) 
 
 
