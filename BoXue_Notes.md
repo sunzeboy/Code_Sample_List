@@ -574,3 +574,107 @@ queueB.onNext("B1")
 ### 真正只合并最新事件的operator（zip）
 ![](https://image.boxueio.com/combine-events-2@2x.png)
 zip合成的Observable中，其中任何一个Sub-observable发生了Completed事件，整个合成的Observable就完成了。
+
+## 如何在不同的Observables之间跳转
+
+### 模拟表单提交
+
+```swift
+let textField = BehaviorSubject<String>(value: "boxu")
+let submitBtn = PublishSubject<Void>()
+
+submitBtn.withLatestFrom(textField)
+    .subscribe(onNext: { dump($0) })
+    .addDisposableTo(bag)
+```
+上面的代码可以理解为，每当submitBtn中有事件发生的时候，就读取textField中的最新事件。这样，就实现submit按钮被点击的时候，订阅到当前表单内容的效果了.把一个Observable中的事件作为跳转到另外一个Observable的“触发器”
+![](https://image.boxueio.com/switch-obs-1@2x.png)
+
+### 在多个Observables之间进行跳转 （switchLatest）
+
+switchLatest 有点像其他语言的 switch 方法，可以对事件流进行转换。
+比如本来监听的 subject1，我可以通过更改 variable 里面的 value 更换事件源。变成监听 subject2。
+![](http://www.hangge.com/blog_uploads/201801/2018011317122482241.png)
+
+使用样例：
+
+```swift
+let disposeBag = DisposeBag()
+ 
+let subject1 = BehaviorSubject(value: "A")
+let subject2 = BehaviorSubject(value: "1")
+ 
+let variable = Variable(subject1)
+ 
+variable.asObservable()
+    .switchLatest()
+    .subscribe(onNext: { print($0) })
+    .disposed(by: disposeBag)
+ 
+subject1.onNext("B")
+subject1.onNext("C")
+ 
+//改变事件源
+variable.value = subject2
+subject1.onNext("D")
+subject2.onNext("2")
+ 
+//改变事件源
+variable.value = subject1
+subject2.onNext("3")
+subject1.onNext("E")
+```
+运行结果如下：
+
+![](http://www.hangge.com/blog_uploads/201801/2018011609322871752.png)
+
+## 为什么需要connectable operator
+
+### 使用publish发布事件
+
+### 使用multicast operator
+
+## 使用connectable operator回放事件
+
+### 订阅时，回放指定个数的事件
+
+#### replay & replayAll
+
+### 为事件的回放指定缓冲区
+
+#### buffer
+
+```swift
+let interval = Observable<Int>
+    .interval(1, scheduler: MainScheduler.instance)
+    .buffer(timeSpan: 4, count: 2, scheduler: MainScheduler.instance)
+```
+
+要注意的是，使用了buffer之后，interval就不再是connectable observable了。它有三个参数:
+
+
+* timeSpan：缓冲区的时间跨度，尽管interval每隔1秒钟发生一次事件，但经过buffer处理后，就变成了最长timeSpan秒发生一次事件了，事件的值，就是由所有缓存的事件值构成的数组。如果timeSpan过后没有任何事件发生，就向事件的订阅者发送一个空数组；
+* count：缓冲区在timeSpan时间里可以缓存的最大事件数量，当达到这个值之后，buffer就会立即把缓存的事件用一个数组发送给订阅者，并重置timeSpan；
+* scheduler：表示Observable事件序列发生在主线程，在后面的内容里，我们还会专门介绍RxSwift中的各种scheduler；
+
+于是，现在的interval就表示每隔4秒，或者最大缓存两个事件，就发送给订阅者。
+
+### 由Observable填充的缓冲区
+
+#### window
+
+```swift
+let interval = Observable<Int>
+    .interval(1, scheduler: MainScheduler.instance)
+    .window(timeSpan: 4, count: 4, scheduler: MainScheduler.instance)
+```
+我们的事件序列就会每隔4秒打开一个窗口，每个窗口周期最多处理4个事件，然后关闭当前窗口，打开新的窗口。
+
+# iOS 101
+## 一个纯手工的Single View Application
+
+1. UIApplicationMain分别创建UIApplication和AppDelegate，并且把它们保持在内存里；
+2. AppDelegate创建UIWindow对象，并且把它保存在AppDelegate.window对象里；
+3. 创建了UIWindow之后，创建rootViewController，让root view就绪；
+4. 调用makeKeyAndVisible让UI显示出来；
+
