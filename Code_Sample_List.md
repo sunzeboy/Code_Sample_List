@@ -16,6 +16,8 @@
    * [TOCropViewController](https://github.com/TimOliver/TOCropViewController) 
 ### Alert
    * [Alerts-Pickers](https://github.com/dillidon/Alerts-Pickers)
+   * [SwiftEntryKit](https://github.com/huri000/SwiftEntryKit?utm_source=gold_browser_extension)
+   
 ### 圆形进程条
    * [ProcessLoadingView](https://github.com/ayman-ibrahim/ProcessLoadingView)
 ### refresh
