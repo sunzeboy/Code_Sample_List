@@ -34,6 +34,9 @@
    * [fluid-slider](https://github.com/Ramotion/fluid-slider?utm_source=gold_browser_extension)
 ### 动画
    * [ViewAnimator](https://github.com/marcosgriselli/ViewAnimator?utm_source=gold_browser_extension)
+### 加载视图
+   * [SkeletonView star5000+](https://github.com/Juanpe/SkeletonView?utm_source=gold_browser_extension)
+
    
 ### 身份识别
 * [IDCardRecognition star1000+](https://github.com/zhongfenglee/IDCardRecognition)
