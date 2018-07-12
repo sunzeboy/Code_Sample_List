@@ -35,6 +35,11 @@
 ### 动画
    * [ViewAnimator](https://github.com/marcosgriselli/ViewAnimator?utm_source=gold_browser_extension)
    
+### 身份识别
+* [IDCardRecognition star1000+](https://github.com/zhongfenglee/IDCardRecognition)
+* [IDCardRecognition star100+（分正反面）](https://github.com/xiaohange/IDCardRecognition)
+* [IDAndBankCard star300](https://github.com/mxl123/IDAndBankCard)
+
 # Network
    * [Swift 写网络层：用面向协议的方式](https://juejin.im/post/5af432385188256737066c04)
 
